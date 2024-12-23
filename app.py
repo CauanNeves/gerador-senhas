@@ -1,4 +1,6 @@
 import PySimpleGUI as sg
+import random
+import string
 
 #Tema
 sg.theme('DarkBlue17')
@@ -31,4 +33,22 @@ while True:
     if event == sg.WIN_CLOSED:
         break
     elif event == 'btn-gerar':
+        #Senha com letras maiúsculas, sem números e sem caracteres especiais
+        if values['maiuscula'] == True and values['minuscula'] == True:
+            senha = ''
+            for i in range(int(values['comprimento'])):
+                senha += random.choice(string.ascii_letters) #Letras maiúsculas e minúsculas
+            print(senha)
+        #Senha minúscula sem números e sem caracteres especiais
+        elif values['minuscula'] == True and values['maiuscula'] == False:
+            senha = ''
+            for i in range(int(values['comprimento'])):
+                senha += str.lower(random.choice(string.ascii_letters)) #Letras minúsculas
+            print(senha)
+        #Senha com números, letras maiúsculas e minúsculas e sem caracteres especiais
+        elif values['numeros'] == True:
+            senha= ''
+            for i in range(int(values['comprimento'])):
+                senha += random.choice(string.hexdigits) #Letras e números
+            print(senha)
         print(event, values)
