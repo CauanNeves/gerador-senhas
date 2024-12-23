@@ -44,7 +44,6 @@ def gerar_senha(comprimento, maiuscula, minuscula, numeros, simbolos):
     
     return ''.join(random.choice(caracteres) for _ in range(int(comprimento)))
 
-
 # Loop de eventos
 while True:
     event, values = window.read()
