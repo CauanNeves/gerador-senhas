@@ -51,10 +51,7 @@ A função `gerar_senha` utiliza a biblioteca `random` para selecionar aleatoria
 
 ## 📸 Exemplo de Uso
 
-1. Selecione o comprimento da senha.
-2. Marque as opções desejadas (Maiúsculas, Minúsculas, Números, Símbolos).
-3. Clique em **Gerar**.
-4. As senhas aparecerão na seção de resultados.
+![Demo](demo.gif)
 
 ## 🤝 Contribuição
 
